@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "./headerLinkData";
 import Megamenu from "@/components/megaMenu/Megamenu";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navlinks = () => {
   const [hovredLink, setHovredLink] = useState<string>("");
@@ -25,14 +26,14 @@ const Navlinks = () => {
           value={"naked"}
           onMouseOver={() => handleHover(link.name, link.sublink || false)}
         >
-          <a href={link.path} className="flex gap-x-2">
+          <Link href={link.path} className="flex gap-x-2">
             {link.name}
             {link.sublinks ? (
               <Image src="/icons/arrowdown.svg" alt="arrow" width={11} height={11} />
             ) : (
               ""
             )}
-          </a>
+          </Link>
         </li>
       ))}
 

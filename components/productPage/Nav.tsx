@@ -2,6 +2,7 @@
 import React, { FC } from "react";
 import type { sublinks } from "@/types/tGamme";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Nav: FC<sublinks> = ({ sublinks, params }) => {
   const pathname = usePathname();
@@ -25,7 +26,7 @@ const Nav: FC<sublinks> = ({ sublinks, params }) => {
                         pathname === url.path ? "bg-[#202020]" : ""
                       } p-4 hover:bg-[#161616] uppercase `}
                     >
-                      <a href={url.path}>{url.name}</a>
+                      <Link href={url.path}>{url.name}</Link>
                     </li>
                   ));
                 }

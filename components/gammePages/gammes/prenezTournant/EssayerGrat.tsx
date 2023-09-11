@@ -15,8 +15,7 @@ const EssayerGrat = () => {
       <div className="container md:justify-start flex justify-center">
         <button className="relative mr-[50px]  p-[18px] rounded-[7px]  w-[149px] bg-transparent h-[49px] border  border-black">
           <span className=" absolute top-[5px] right-0 p-[18px] rounded-[7px] h-[49px] font-bold text-white  bg-black">
-            {" "}
-            FAIRE UN ESSAI{" "}
+            FAIRE UN ESSAI
           </span>
         </button>
       </div>

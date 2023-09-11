@@ -9,6 +9,7 @@ import { faInstagram, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 
 import MobileMenu from "@/components/megaMenu/MobileMenu";
 import Navlinks from "./Navlinks";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isOpenMobile, setIsOpenMobile] = useState(false);
@@ -43,14 +44,14 @@ const Navbar = () => {
           <span> FAIRE UN ESSAI </span>
         </button>
         <div className="icons lg:flex hidden ">
-          <a href="">
+          <Link href="">
             {" "}
             <FontAwesomeIcon icon={faFacebookF} className="mr-3" />
-          </a>
+          </Link>
 
-          <a href="">
+          <Link href="">
             <FontAwesomeIcon icon={faInstagram} />
-          </a>
+          </Link>
         </div>
       </div>
       <button className="navbar">

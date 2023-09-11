@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 const Actualite = () => {
   return (
     <section className="actualite">
@@ -15,7 +16,7 @@ const Actualite = () => {
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
           dolorem laudantium labore. Perferendis, sequi alias.
         </p>
-        <a href="#">ACCEDER AU BLOG</a>
+        <Link href="#">ACCEDER AU BLOG</Link>
       </div>
 
       <div className="holder">
@@ -23,7 +24,7 @@ const Actualite = () => {
           <div className="box">
             <h3>L&apos;ATTENTEST TEMINEE</h3>
             <p>DECOUVREZ LES NOUVEALUTES 525CC!</p>
-            <a href="#">EN SAVOIR PLUS</a>
+            <Link href="#">EN SAVOIR PLUS</Link>
           </div>
         </div>
       </div>

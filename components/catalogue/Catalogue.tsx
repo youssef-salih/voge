@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Catalogue = () => {
@@ -27,7 +28,7 @@ const Catalogue = () => {
             />
             <div className="descibe">
               <h2>NAKED R</h2>
-              <a href="#">VOIR LA GAMME</a>
+              <Link href="#">VOIR LA GAMME</Link>
             </div>
           </div>
           <div className="box mx-auto">
@@ -42,7 +43,7 @@ const Catalogue = () => {
             </div>
             <div className="descibe">
               <h2>NAKED R</h2>
-              <a href="#">VOIR LA GAMME</a>
+              <Link href="#">VOIR LA GAMME</Link>
             </div>
           </div>
           <div className="box mx-auto">

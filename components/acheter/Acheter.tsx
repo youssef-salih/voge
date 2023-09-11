@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Acheter = () => {
   return (
@@ -14,7 +15,7 @@ const Acheter = () => {
             et nam sed reiciendis exercitationem perferendis corporis dicta?
             Veritatis deserunt, a quis consectetur beatae error!
           </p>
-          <a href="">Trouver un revendeur</a>
+          <Link href="">Trouver un revendeur</Link>
         </div>
         <div className="images">
           <div className="image">

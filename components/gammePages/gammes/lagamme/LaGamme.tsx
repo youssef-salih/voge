@@ -5,6 +5,7 @@ import { sublinks } from "@/types/tGamme";
 
 import { Product } from "@/types/tProduct";
 import { products } from "@/layout/products";
+import Link from "next/link";
 
 const LaGamme: FC<sublinks> = ({ sublinks, router }) => {
   const [finalProducts, setFinalProducts] = useState<Product[]>([]);
@@ -41,13 +42,13 @@ const LaGamme: FC<sublinks> = ({ sublinks, router }) => {
           <div className="flex flex-col flex-wrap md:flex-row items-center justify-center lg:justify-start gap-8 ">
             {finalProducts
               ? finalProducts.map((item, index) => (
-                  <a href={`/product/${item.name}`} key={index}>
+                  <Link href={`/product/${item.name}`} key={index}>
                     <LaGammeCard
                       price={item.tarifTTC}
                       model={item.name}
                       image={item.main_image}
                     />
-                  </a>
+                  </Link>
                 ))
               : ""}
           </div>
