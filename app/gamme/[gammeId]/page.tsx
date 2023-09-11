@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Banner from "@/components/gammePages/gammes/Banner";
 import NavGammes from "@/layout/NavGammes";
 import SeDeplacer from "@/components/gammePages/gammes/SeDeplacerMoinsPolluer/SeDeplacer";
@@ -7,7 +7,6 @@ import LaGamme from "@/components/gammePages/gammes/lagamme/LaGamme";
 import EssayerGrat from "@/components/gammePages/gammes/prenezTournant/EssayerGrat";
 import Serie from "@/components/gammePages/gammes/serie/Serie";
 import { SubNavLink } from "@/layout/headerLinkData";
-import { usePathname } from "next/navigation";
 
 export async function generateStaticParams() {
   const params = SubNavLink.map((item) => item.name);
@@ -15,8 +14,6 @@ export async function generateStaticParams() {
 }
 
 const Page = ({ params }: { params: { gammeId: string } }) => {
-  const pathname = usePathname();
-
   const selectedGamme = SubNavLink.find(
     (item: any) => item.name === params.gammeId
   );
@@ -24,7 +21,7 @@ const Page = ({ params }: { params: { gammeId: string } }) => {
   return (
     <>
       {/* {params.gammeId} */}
-      <NavGammes router={pathname} sublinks={selectedGamme} />
+      <NavGammes sublinks={selectedGamme} />
       <Banner sublinks={selectedGamme} />
       <LaGamme sublinks={selectedGamme} />
       <Essayer />

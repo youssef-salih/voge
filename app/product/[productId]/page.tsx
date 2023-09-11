@@ -4,7 +4,7 @@ import Banner from "@/components/productPage/Banner";
 import Apropos from "@/components/productPage/aPropos/Apropos";
 import Caracteristique from "@/components/productPage/caracteristique/Caracteristique";
 import { SubNavLink } from "../../../layout/headerLinkData";
-import { usePathname } from "next/navigation";
+
 import Nav from "@/components/productPage/Nav";
 import { products } from "@/layout/products";
 import SeDeplacer from "@/components/gammePages/gammes/SeDeplacerMoinsPolluer/SeDeplacer";
@@ -21,10 +21,10 @@ const Page = ({ params }: { params: { productId: string } }) => {
 
   // console.log(params.productId);
   // get the path
-  const pathname = usePathname();
+
   return (
     <>
-      <Nav router={pathname} sublinks={SubNavLink} params={params.productId} />
+      <Nav sublinks={SubNavLink} params={params.productId} />
       {selectedProduct ? (
         <>
           <Banner product={selectedProduct} />

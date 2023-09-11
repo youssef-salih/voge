@@ -1,8 +1,10 @@
 "use client";
-import React, { FC, useEffect, useState } from "react";
+import React, { FC } from "react";
+import { usePathname } from "next/navigation";
 import { sublinks } from "@/types/tGamme";
 
-const NavGammes: FC<sublinks> = ({ sublinks, router }) => {
+const NavGammes: FC<sublinks> = ({ sublinks }) => {
+  const pathname = usePathname();
   return (
     <div className="bg-yellow-300 text-white hidden md:flex ">
       <div className="container">
@@ -13,7 +15,7 @@ const NavGammes: FC<sublinks> = ({ sublinks, router }) => {
                   <li
                     key={index}
                     className={`${
-                      router === url.path ? "bg-[#202020]" : ""
+                      pathname === url.path ? "bg-[#202020]" : ""
                     } p-4 hover:bg-[#161616] uppercase `}
                   >
                     <a href={url.path}>{url.name}</a>

@@ -1,12 +1,11 @@
 "use client";
-import React, { FC, useEffect, useState } from "react";
+import React, { FC } from "react";
 import { sublinks } from "@/types/tGamme";
+import { usePathname } from "next/navigation";
 
-const Nav: FC<sublinks> = ({ sublinks, params, router }) => {
-  useEffect(() => {
-    return () => {};
-  }, []);
-
+const Nav: FC<sublinks> = ({ sublinks, params }) => {
+  const pathname = usePathname();
+  console.log(pathname);
   return (
     <div className="bg-yellow-300 text-white hidden md:flex">
       <div className="container">
@@ -23,7 +22,7 @@ const Nav: FC<sublinks> = ({ sublinks, params, router }) => {
                     <li
                       key={url.name}
                       className={`${
-                        router === url.path ? "bg-[#202020]" : ""
+                        pathname === url.path ? "bg-[#202020]" : ""
                       } p-4 hover:bg-[#161616] uppercase `}
                     >
                       <a href={url.path}>{url.name}</a>
