@@ -18,7 +18,13 @@ const Catalogue = () => {
         </p>
         <div className="images">
           <div className="box mx-auto">
-            <Image src="/moto1.png" alt="moto" width={260} height={0} />
+            <Image
+              src="/moto1.png"
+              alt="moto"
+              width={260}
+              height={0}
+              loading="lazy"
+            />
             <div className="descibe">
               <h2>NAKED R</h2>
               <a href="#">VOIR LA GAMME</a>
@@ -26,7 +32,13 @@ const Catalogue = () => {
           </div>
           <div className="box mx-auto">
             <div className="active">
-              <Image src="/moto2.png" alt="moto" width={260} height={0} />
+              <Image
+                src="/moto2.png"
+                alt="moto"
+                width={260}
+                height={0}
+                loading="lazy"
+              />
             </div>
             <div className="descibe">
               <h2>NAKED R</h2>
@@ -34,7 +46,13 @@ const Catalogue = () => {
             </div>
           </div>
           <div className="box mx-auto">
-            <Image src="/moto3.png" alt="moto" width={260} height={0} />
+            <Image
+              src="/moto3.png"
+              alt="moto"
+              width={260}
+              height={0}
+              loading="lazy"
+            />
             <div className="descibe">
               <h2>NAKED R</h2>
               <a href="#">VOIR LA GAMME</a>
