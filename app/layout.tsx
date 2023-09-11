@@ -1,11 +1,8 @@
-"use client";
-import { useState, useEffect } from "react";
 import Head from "next/head";
 import Navbar from "@/layout/Navbar";
 import "./globals.css";
 import { Roboto_Condensed } from "next/font/google";
 import Footer from "@/layout/Footer";
-import Preloader from "@/components/preloader/Preloader";
 
 const roboto = Roboto_Condensed({ subsets: ["latin"], weight: "400" });
 
@@ -18,9 +15,6 @@ export default function RootLayout({
   title?: string; // Optional title prop
   description?: string; // Optional description prop
 }) {
-
-
-
   return (
     <html lang="en">
       <Head>
