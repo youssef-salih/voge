@@ -9,11 +9,6 @@ import Nav from "@/components/productPage/Nav";
 import { products } from "@/layout/products";
 import SeDeplacer from "@/components/gammePages/gammes/SeDeplacerMoinsPolluer/SeDeplacer";
 
-export async function generateStaticParams() {
-  const params = products.map((item) => item.name);
-  return params;
-}
-
 const Page = ({ params }: { params: { productId: string } }) => {
   const selectedProduct = products.find(
     (item) => item.name === params.productId
