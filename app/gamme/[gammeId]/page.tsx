@@ -1,4 +1,3 @@
-"use client";
 import React, { useEffect, useState } from "react";
 import Banner from "@/components/gammePages/gammes/Banner";
 import NavGammes from "@/layout/NavGammes";
@@ -9,21 +8,18 @@ import EssayerGrat from "@/components/gammePages/gammes/prenezTournant/EssayerGr
 import Serie from "@/components/gammePages/gammes/serie/Serie";
 import { SubNavLink } from "@/layout/headerLinkData";
 import { usePathname } from "next/navigation";
+
+export async function generateStaticParams() {
+  const params = SubNavLink.map((item) => item.name);
+  return params;
+}
+
 const Page = ({ params }: { params: { gammeId: string } }) => {
   const pathname = usePathname();
 
-  const [selectedGamme, setSelectedGamme] = useState<any>(null);
-  useEffect(() => {
-    const foundGamme = SubNavLink.find(
-      (item: any) => item.name === params.gammeId
-    );
-
-    if (foundGamme) {
-      setSelectedGamme(foundGamme);
-    } else {
-      console.error(`Product with name '${params}' not found.`);
-    }
-  }, [params]);
+  const selectedGamme = SubNavLink.find(
+    (item: any) => item.name === params.gammeId
+  );
 
   return (
     <>
