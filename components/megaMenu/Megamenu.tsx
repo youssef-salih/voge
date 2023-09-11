@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import {
   faChevronRight,
   faGasPump,
@@ -8,6 +6,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Image from "next/image";
+import Link from "next/link";
 
 type MegamenuProps = {
   links: {
@@ -67,9 +66,12 @@ const Megamenu: React.FC<MegamenuProps> = (props) => {
                     className={`text-xs mr-3 text-yellow-300`}
                   />
 
-                  <a href={link.path} className="text-l font-semibold">
+                  <Link
+                    href={link.path || "#"}
+                    className="text-l font-semibold"
+                  >
                     {link.name} {link.new ? "(Nouvauté)" : ""}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
