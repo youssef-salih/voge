@@ -1,11 +1,11 @@
 "use client";
 import React, { FC } from "react";
-import { sublinks } from "@/types/tGamme";
+import type { sublinks } from "@/types/tGamme";
 import { usePathname } from "next/navigation";
 
 const Nav: FC<sublinks> = ({ sublinks, params }) => {
   const pathname = usePathname();
-  console.log(pathname);
+  console.log(sublinks);
   return (
     <div className="bg-yellow-300 text-white hidden md:flex">
       <div className="container">

@@ -9,7 +9,6 @@ import Preloader from "@/components/preloader/Preloader";
 
 const roboto = Roboto_Condensed({ subsets: ["latin"], weight: "400" });
 
-
 export default function RootLayout({
   children,
   title = "voge",
@@ -19,18 +18,9 @@ export default function RootLayout({
   title?: string; // Optional title prop
   description?: string; // Optional description prop
 }) {
-  const [isLoading, setIsLoading] = useState(true);
 
-  // Simulate loading for 2 seconds (adjust as needed)
-  useEffect(() => {
-    const loadingTimeout = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
 
-    return () => {
-      clearTimeout(loadingTimeout);
-    };
-  }, []);
+
   return (
     <html lang="en">
       <Head>
@@ -39,15 +29,9 @@ export default function RootLayout({
         <meta name="description" content={description} />
       </Head>
       <body className={roboto.className}>
-        {isLoading ? (
-          <Preloader />
-        ) : (
-          <>
-            <Navbar />
-            {children}
-            <Footer />
-          </>
-        )}
+        <Navbar />
+        {children}
+        <Footer />
       </body>
     </html>
   );
