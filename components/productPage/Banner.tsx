@@ -45,7 +45,7 @@ const Banner: FC<ProProps> = ({ product }) => {
                 À partir de {product.prix_mois}€ par mois¹
               </p>
               <p className="text-sm font-extralight mb-5">
-                Location avec option d'xachat après un 1er loyer majoré d'xun
+                Location avec option d&apos;xachat après un 1er loyer majoré d&apos;xun
                 montant de {product.location} € offre disponible du{" "}
                 {product.location_date_debut}
                 au {product.location_date_fin}
@@ -68,7 +68,7 @@ const Banner: FC<ProProps> = ({ product }) => {
                 </span>
               </p>
               <p className="text-sm text-white text-center lg:text-left">
-                *Frais de mise en service et d'immatriculation non inclus
+                *Frais de mise en service et d&apos;immatriculation non inclus
               </p>
             </div>
           </div>

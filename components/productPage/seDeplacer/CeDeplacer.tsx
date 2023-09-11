@@ -6,18 +6,18 @@ const CeDeplacer = () => {
       <div className="container mt-8">
         <h1 className="font-bold text-2xl my-4">¹ INFORMATION LOA</h1>
         <h2 className="font-bold text-2xl my-4">
-          LOCATION AVEC OPTION D'ACHAT
+          LOCATION AVEC OPTION D&apos;ACHAT
         </h2>
         <p className="  my-4">
           <span className="font-bold text-xl mr-2">Exemple:</span>
-          Pour une Location avec Option d'Achat, pour une Voge 300 R d'un
+          Pour une Location avec Option d&apos;Achat, pour une Voge 300 R d&apos;un
           montant de 4 250,00 € TTC sur 37 mois, après paiement à la livraison
-          d'un premier loyer majoré de 850,00 €, vous remboursez 36 loyers de
+          d&apos;un premier loyer majoré de 850,00 €, vous remboursez 36 loyers de
           64,66 €, hors assurance facultative. Le montant total dû hors option
-          d'achat est de 3 177,76 €. Option d'achat de 1 700,00 € soit un
-          montant total dû option d'achat incluse de 4 877,76 €. Le coût mensuel
-          de l'assurance Sécurivie facultative est de 4,68 € et s'ajoute aux
-          loyers ci-dessus. Le montant total dû au titre de l'assurance
+          d&apos;achat est de 3 177,76 €. Option d&apos;achat de 1 700,00 € soit un
+          montant total dû option d&apos;achat incluse de 4 877,76 €. Le coût mensuel
+          de l&apos;assurance Sécurivie facultative est de 4,68 € et s&apos;ajoute aux
+          loyers ci-dessus. Le montant total dû au titre de l&apos;assurance
           facultative est de 173,16 €.
         </p>
         <p className=" text-gray-400">

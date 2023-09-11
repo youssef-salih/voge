@@ -9,7 +9,7 @@ const Essayer = () => {
         </h1>
         <p className="md:text-lg text-sm">
           Vous craquez pour la 300R ou pour la 500R ? Faites-vous votre propre
-          avis et venez l'essayer !
+          avis et venez l&apos;essayer !
         </p>
       </div>
 

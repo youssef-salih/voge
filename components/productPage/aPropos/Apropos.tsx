@@ -39,8 +39,8 @@ const Apropos: FC<ProProps> = ({ product }) => {
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                 className="mySwiper lg:w-[560px] w-[220px] md:w-[400px]"
               >
-                {product.swiper?.map((img: any) => (
-                  <SwiperSlide>
+                {product.swiper?.map((img: any, index: any) => (
+                  <SwiperSlide key={index}>
                     <Image
                       src={img}
                       alt=""

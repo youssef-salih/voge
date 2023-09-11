@@ -21,7 +21,7 @@ const Actualite = () => {
       <div className="holder">
         <div className="image">
           <div className="box">
-            <h3>L'ATTENTEST TEMINEE</h3>
+            <h3>L&apos;ATTENTEST TEMINEE</h3>
             <p>DECOUVREZ LES NOUVEALUTES 525CC!</p>
             <a href="#">EN SAVOIR PLUS</a>
           </div>

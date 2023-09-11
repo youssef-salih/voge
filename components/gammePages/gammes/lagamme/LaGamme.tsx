@@ -1,6 +1,5 @@
 "use client";
 import React, { FC, useEffect, useState } from "react";
-import Link from "next/link";
 import LaGammeCard from "./LaGammeCard";
 import { sublinks } from "@/types/tGamme";
 
@@ -41,8 +40,8 @@ const LaGamme: FC<sublinks> = ({ sublinks, router }) => {
           </div>
           <div className="flex flex-col flex-wrap md:flex-row items-center justify-center lg:justify-start gap-8 ">
             {finalProducts
-              ? finalProducts.map((item) => (
-                  <a href={`/product/${item.name}`}>
+              ? finalProducts.map((item, index) => (
+                  <a href={`/product/${item.name}`} key={index}>
                     <LaGammeCard
                       price={item.tarifTTC}
                       model={item.name}
