@@ -5,14 +5,14 @@ import { Product } from "@/types/tProduct";
 export const NavLink = [
   {
     name: "naked",
-    path: "/gamme/naked-r",
+    path: "/gamme/naked",
     letters: "R",
     image: "/mega/naked.png",
     sublink: true,
     sublinks: [
       {
         name: "la gamme naked",
-        path: "/gamme/naked-r",
+        path: "/gamme/naked",
         new: false,
       },
       {
@@ -167,12 +167,12 @@ export const NavLink = [
 // small navbar
 export const SubNavLink: Gamme[] = [
   {
-    name: "naked-r",
-    path: "/gamme/naked-r",
+    name: "naked",
+    path: "/gamme/naked",
     slogan: "Naked R",
     // urls showed in the nav
     urls: [
-      { name: "naked-r", path: "/gamme/naked-r" },
+      { name: "naked-r", path: "/gamme/naked" },
       { name: "300 R", path: "/product/300r" },
       { name: "500 R", path: "/product/500r" },
     ],
